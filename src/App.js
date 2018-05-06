@@ -44,16 +44,22 @@ class App extends Component {
     return (
       <div>
         {/* <HelloWorld text="今天就開始學React!" /> */}
-        <div>A's chatroom</div>
-        <ItemsTool items={this.state.itemsdata}/>
-        <ItemsTool items={this.state.Bdata}/>
-        <AddAForm addItem={this.handleAItem}/>
-
-        <div>B's chatroom</div>
-        <ItemsTool items={this.state.itemsdata}/>
-        <ItemsTool items={this.state.Bdata}/>
-        <AddBForm addItem={this.handleBItem}/>
-        
+        <div style={{float : 'left',width:'50%',backgroundColor: 'LIGHTCYAN'}}>
+          <div>A's chatroom</div>
+          <ItemsTool items={this.state.itemsdata}/>
+          <div style={{textAlign: 'right'}}>
+            <ItemsTool  items={this.state.Bdata}/>
+          </div>
+          <AddAForm addItem={this.handleAItem}/>
+        </div>
+        <div style={{float : 'right',width:'50%',backgroundColor: 'LIGHTYELLOW' }}>
+          <div>B's chatroom</div>
+          <div style={{textAlign: 'right'}}>
+            <ItemsTool  items={this.state.itemsdata}/>
+          </div>
+          <ItemsTool items={this.state.Bdata}/>
+          <AddBForm addItem={this.handleBItem}/>
+        </div>
       </div>  
 
     )

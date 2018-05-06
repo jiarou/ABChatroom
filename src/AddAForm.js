@@ -16,7 +16,7 @@ class AddAForm extends Component {
       handleSubmit(event) {
         //alert('A name was submitted: ' + this.state.todoText);
         //event.preventDefault();
-        this.props.addItem(this.state.todoText);
+        this.props.addItem("A:"+this.state.todoText);
         this.refs.comment.value = '';
       }
   
@@ -24,10 +24,10 @@ class AddAForm extends Component {
         return (
            
             <div>
-                <input type="text" ref="comment"
+                <input type="text" ref="comment"style={{width:'75%'}}
                     //value={this.state.todoText} 
                     onChange={this.handleChange}/>
-                <button
+                <button style={{width:'20%'}}
                     onClick={this. handleSubmit}>A</button>
             </div>
         )
