@@ -24,10 +24,12 @@ class AddAForm extends Component {
         //event.preventDefault();
         
         if(this.props.text == "A"){
-            this.props.addItem(<div >{this.props.text}+{this.state.todoText}</div>);
+            this.props.addAItem(<div style={{textAlign:'left'}}>{this.props.text}:{this.state.todoText}</div>);
+            this.props.addBItem(<div style={{textAlign:'right'}}>{this.props.text}:{this.state.todoText}</div>);
             this.refs.comment.value = '';
         }else if (this.props.text == "B"){
-            this.props.addItem(<div >{this.props.text}+{this.state.todoText}</div>);
+            this.props.addAItem(<div style={{textAlign:'right'}}>{this.props.text}:{this.state.todoText}</div>);
+            this.props.addBItem(<div style={{textAlign:'left'}}>{this.props.text}:{this.state.todoText}</div>);
             this.refs.comment.value = '';
         }
 
